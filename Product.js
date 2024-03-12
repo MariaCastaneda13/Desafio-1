@@ -1,3 +1,5 @@
+//María Fernanda Castañeda Álvarez
+
 class ProductManager {
 
     #products
@@ -26,7 +28,7 @@ class ProductManager {
 
     #isNotDuplicate(code) {
         if (this.#products.find((product) => product.code === code) !== undefined) {
-            console.error("El codigo ya existe, posible producto duplicado.");
+            console.error("El codigo ya existe, el producto está duplicado.");
             return false;
         } else {
             return true;
@@ -60,7 +62,7 @@ class ProductManager {
     };
 };
 
-const productManagerInstance = new ProductManager();
+const productManagerInstance = new ProductManager(); 
 
 productManagerInstance.addProduct("producto prueba 1", "Este es un producto prueba 1", 200, "Sin imagen", "abc121", 25);
 productManagerInstance.addProduct("producto prueba 2", "Este es un producto prueba 1", 200, "Sin imagen", "abc122", 25);
@@ -77,9 +79,5 @@ productManagerInstance.addProduct("producto prueba 4", "Este es un producto prue
 
 // Sin todos los campos completos
 productManagerInstance.addProduct("producto prueba 5", "Este es un producto prueba 1", 200, "Sin imagen", 25);
-
-
-
-
 
 console.log(productManagerInstance.getProductsById(6))
