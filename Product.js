@@ -1,83 +1,48 @@
-//María Fernanda Castañeda Álvarez
+class ProductsManager {
+    #products = [];
 
-class ProductManager {
-
-    #products
-
-    constructor() {
-        this.#products = []
-    };
-
-    getProducts() {
-        return this.#products
-    };
-
-    getProductsById(id) {
-        return this.#products.find((product) => product.id === id);
-    };
-
-    #areFieldComplete(title, description, price, thumbnail, code, stock) {
-        if (!title || !description || !price || !thumbnail || !code || !stock) {
-            console.error("Por favor, completa todos los campos.");
-            return false;
-
-        } else {
-            return true;
+    create(data) {
+        const product = {
+            id: this.#generateId(),
+            title: data.title,
+            photo: data.photo,
+            category: data.category,
+            price: data.price,
+            stock: data.stock
         };
-    };
+        this.#products.push(product);
+        console.log("Producto creado correctamente.");
+    }
 
-    #isNotDuplicate(code) {
-        if (this.#products.find((product) => product.code === code) !== undefined) {
-            console.error("El codigo ya existe, el producto está duplicado.");
-            return false;
-        } else {
-            return true;
-        };
-    };
+    read() {
+        return this.#products;
+    }
 
-    #idGenerator() {
-        let id = 0;
+    #generateId() {
         if (this.#products.length === 0) {
-            id = 1;
+            return 1;
         } else {
-            id = this.#products[this.#products.length - 1].id + 1;
-        };
-        return id;
-    };
+            return this.#products[this.#products.length - 1].id + 1;
+        }
+    }
+}
 
-    addProduct(title, description, price, thumbnail, code, stock) {
+const productManagerInstance = new ProductsManager();
 
-        if (this.#areFieldComplete(title, description, price, thumbnail, code, stock) && this.#isNotDuplicate(code)) {
-            const newProduct = {
-                id: this.#idGenerator(),
-                title: title,
-                description: description,
-                price: price,
-                thumbnail: thumbnail,
-                code: code,
-                stock: stock
-            }
-            this.#products.push(newProduct);
-        };
-    };
-};
+productManagerInstance.create({
+    title: "Smartphone",
+    photo: "ruta/imagen1.jpg",
+    category: "Electronics",
+    price: 499.99,
+    stock: 10
+});
 
-const productManagerInstance = new ProductManager(); 
+productManagerInstance.create({
+    title: "Laptop",
+    photo: "ruta/imagen2.jpg",
+    category: "Electronics",
+    price: 899.99,
+    stock: 5
+});
 
-productManagerInstance.addProduct("producto prueba 1", "Este es un producto prueba 1", 200, "Sin imagen", "abc121", 25);
-productManagerInstance.addProduct("producto prueba 2", "Este es un producto prueba 1", 200, "Sin imagen", "abc122", 25);
-productManagerInstance.addProduct("producto prueba 3", "Este es un producto prueba 1", 200, "Sin imagen", "abc122", 25);
-productManagerInstance.addProduct("producto prueba 6", "Este es un producto prueba 1", 200, "Sin imagen", "abc126", 25);
-productManagerInstance.addProduct("producto prueba 7", "Este es un producto prueba 1", 200, "Sin imagen", "abc127", 25);
-productManagerInstance.addProduct("producto prueba 8", "Este es un producto prueba 1", 200, "Sin imagen", "abc128", 25);
-productManagerInstance.addProduct("producto prueba 9", "Este es un producto prueba 1", 200, "Sin imagen", "abc129", 25);
-productManagerInstance.addProduct("producto prueba 10", "Este es un producto prueba 1", 200, "Sin imagen", "abc1210", 25);
-
-
-// Codigo repetido
-productManagerInstance.addProduct("producto prueba 4", "Este es un producto prueba 1", 200, "Sin imagen", "abc124", 25);
-
-// Sin todos los campos completos
-productManagerInstance.addProduct("producto prueba 5", "Este es un producto prueba 1", 200, "Sin imagen", 25);
-
-console.log(productManagerInstance.getProductsById(6))
+console.log(productManagerInstance.read());

@@ -8,7 +8,7 @@ class UsersManager {
             photo: data.photo,
             email: data.email,
             password: data.password,
-            role: 0,
+            role: data.role,
         };
         this.#users.push(user);
         console.log("El usuario se creo correctamente");
@@ -34,6 +34,7 @@ userManagerInstance.create({
     photo: "Maria1.jpg",
     email: "maria08@hotmail.com",
     password: "Buendia123",
+    role: "Analista SEO",
 });
 
 userManagerInstance.create({
@@ -41,6 +42,7 @@ userManagerInstance.create({
     photo: "Carolina1.jpg",
     email: "carolina_rocha01@gmail.com",
     password: "Carorocha08",
+    role: "Marketing director",
 });
 
 console.log(userManagerInstance.read());
