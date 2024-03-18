@@ -1,3 +1,4 @@
+//María Fernanda Castañeda Álvarez
 class ProductsManager {
     #products = [];
 
