@@ -11,7 +11,7 @@ class ProductsManager {
             stock: data.stock
         };
         this.#products.push(product);
-        console.log("Producto creado correctamente.");
+        console.log("El producto se creó correctamente.");
     }
 
     read() {
@@ -30,19 +30,42 @@ class ProductsManager {
 const productManagerInstance = new ProductsManager();
 
 productManagerInstance.create({
-    title: "Smartphone",
-    photo: "ruta/imagen1.jpg",
+    title: "Vivo Y20",
+    photo: "VivoY20.jpg",
     category: "Electronics",
-    price: 499.99,
+    price: 500000,
     stock: 10
 });
 
 productManagerInstance.create({
-    title: "Laptop",
-    photo: "ruta/imagen2.jpg",
+    title: "Portatil ASUS Vivobook",
+    photo: "Asus.jpg",
     category: "Electronics",
-    price: 899.99,
+    price: 1899000,
     stock: 5
 });
 
+productManagerInstance.create({
+    title: "IMac 24 pulgadas",
+    photo: "Mac.jpg",
+    category: "Electronics",
+    price: 10300000,
+    stock: 12
+});
+
+productManagerInstance.create({
+    title: "Parlante bose",
+    photo: "Bose.jpg",
+    category: "Electronics",
+    price: 600000,
+    stock: 4
+});
+
+productManagerInstance.create({
+    title: "Kindle Paper White",
+    photo: "Kindle.jpg",
+    category: "Electronics",
+    price: 900000,
+    stock: 15
+});
 console.log(productManagerInstance.read());
