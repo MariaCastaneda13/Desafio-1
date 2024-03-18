@@ -31,34 +31,34 @@ class ProductsManager {
 const productManagerInstance = new ProductsManager();
 
 productManagerInstance.create({
-    title: "Vivo Y20",
-    photo: "VivoY20.jpg",
-    category: "Electronics",
-    price: 500000,
+    title: "Harry Potter y la piedra filosofal",
+    photo: "HP.jpg",
+    category: "Fantasía",
+    price: 100000,
     stock: 10
 });
 
 productManagerInstance.create({
-    title: "Portatil ASUS Vivobook",
-    photo: "Asus.jpg",
-    category: "Electronics",
-    price: 1899000,
+    title: "En agosto nos vemos",
+    photo: "EANV.jpg",
+    category: "Universal",
+    price: 65000,
     stock: 5
 });
 
 productManagerInstance.create({
-    title: "IMac 24 pulgadas",
-    photo: "Mac.jpg",
-    category: "Electronics",
-    price: 10300000,
+    title: "La ciudad y sus muros inciertos",
+    photo: "LCNI.jpg",
+    category: "Universal",
+    price: 79000,
     stock: 12
 });
 
 productManagerInstance.create({
-    title: "Parlante bose",
-    photo: "Bose.jpg",
-    category: "Electronics",
-    price: 600000,
+    title: "Recupera tu mente,reconquista tu vida",
+    photo: "RTMRTV.jpg",
+    category: "Autoayuda",
+    price: 65000,
     stock: 4
 });
 

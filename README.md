@@ -1,0 +1,1 @@
+Se realizó un gestor de productos y usuarios de una empresa. Las clases ProductsManager y UsersManager facilitan la creación y lectura de productos, con funcionalidades para agregar nuevos productos y obtener una lista de todos los productos disponibles que allí se encuentran.
