@@ -1,0 +1,34 @@
+[
+  {
+    "id": "362c3614e09cc52922b5d18b",
+    "name": "María",
+    "photo": "Maria1.jpg",
+    "email": "maria08@hotmail.com",
+    "password": "Buendia123",
+    "role": "Analista SEO"
+  },
+  {
+    "id": "1d8584219ed5cbbe5a920aef",
+    "name": "Carolina",
+    "photo": "Carolina1.jpg",
+    "email": "carolina_rocha01@gmail.com",
+    "password": "Carorocha08",
+    "role": "Marketing director"
+  },
+  {
+    "id": "4d30c3817a302638445c5e1d",
+    "name": "Pedro",
+    "photo": "Pedroperfil.jpg",
+    "email": "pedropascual@gmail.com",
+    "password": "pedro2007",
+    "role": "Head director"
+  },
+  {
+    "id": "307a33e564bea0525f060698",
+    "name": "Mariana",
+    "photo": "Mpedraza.jpg",
+    "email": "Mpedraza09@gmail.com",
+    "password": "Lichos08",
+    "role": "Redactora SEO"
+  }
+]
