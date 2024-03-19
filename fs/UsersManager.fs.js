@@ -89,5 +89,7 @@ async function test() {
         password: "Lichos08",
         role: "Redactora SEO",
     });
+    console.log(await gestorDeUsuarios.read())
+   console.log(await gestorDeUsuarios .readOne("1d8584219ed5cbbe5a920aef"))
 }
 test ()
