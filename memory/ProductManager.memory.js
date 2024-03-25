@@ -106,4 +106,74 @@ productManagerInstance.create({
     price: 110000,
     stock: 24
 });
+productManagerInstance.create({
+    title: "Sobre el origen del tiempo",
+    photo: "SEODT.jpg",
+    category: "Ciencia y divulgación",
+    price: 69000,
+    stock: 19
+});
+productManagerInstance.create({
+    title: "Supercomunicadores",
+    photo: "superCom.jpg",
+    category: "Autoayuda y superación",
+    price: 54000,
+    stock: 2
+});
+productManagerInstance.create({
+    title: "El silencio en sus ojos",
+    photo: "ESESO.jpg",
+    category: "Policiaca",
+    price: 55000,
+    stock: 20
+});
+productManagerInstance.create({
+    title: "Riverview",
+    photo: "Rvw.jpg",
+    category: "Literatura Universal",
+    price: 55000,
+    stock: 7
+});
+productManagerInstance.create({
+    title: "Cocina de casa",
+    photo: "CDC.jpg",
+    category: "Cocina",
+    price: 150000,
+    stock: 21
+});
+productManagerInstance.create({
+    title: "Quiero morir pero también comer tteokbokki",
+    photo: "QMPCT.jpg",
+    category: "Autoayuda y superación",
+    price:48000 ,
+    stock: 8
+});
+productManagerInstance.create({
+    title: "Bajo la misma estrella",
+    photo: "BLME.jpg",
+    category: "Literatura juvenil",
+    price: 62000,
+    stock: 19
+});
+productManagerInstance.create({
+    title: "Elizabeth Finch",
+    photo: "EF.jpg",
+    category: "Literatura Universal",
+    price: 89000,
+    stock: 7
+});
+productManagerInstance.create({
+    title: "Grandes esperanzas",
+    photo: "GE.jpg",
+    category: "Literatura universal",
+    price: 124000,
+    stock: 21
+});
+productManagerInstance.create({
+    title: "La historia de Oliver Twist",
+    photo: "LHOT.jpg",
+    category: "Literatura universal",
+    price:48000 ,
+    stock: 8
+});
 console.log(productManagerInstance.read());
