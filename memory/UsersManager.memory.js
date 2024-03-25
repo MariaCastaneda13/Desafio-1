@@ -15,10 +15,10 @@ class UsersManager {
         };
 
         if (!data.email || !data.password || !data.role) 
-       { console.log("Usuario no creado, por favor ingrese todos los datos.") }
+       { console.log("The user has not been created, please enter all data.") }
       else {
             UsersManager.#users.push(user);
-            console.log("El usuario se creo correctamente");
+            console.log("The user was created correctly");
         }
     }
 
@@ -27,14 +27,12 @@ class UsersManager {
     }
     readOne(id){
         return UsersManager.#users.find(each=>each.id===id)
-        //agregar trycatch y condicional en caso de no encontrar usuario
     }
 
     destroy(id){
         const filtered=UsersManager.#users.filter(each=>each.id!==id);
         UsersManager.#users =filtered;
-        console.log((id+"eliminado"));
-        //agregar trycatch y condicional en caso de no encontrar usuarios
+        console.log((id+"deleted"));
     }
 }
 const gestorDeUsuarios = new UsersManager();

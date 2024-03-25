@@ -12,9 +12,9 @@ class UsersManager {
         if (!exists) {
             const stringData = JSON.stringify([], null, 2)
             fs.writeFileSync(this.path, stringData)
-            console.log("Archivo creado")
+            console.log("File created")
         } else {
-            console.log("Archivo ya existe")
+            console.log("File already exist")
         }
     }
 

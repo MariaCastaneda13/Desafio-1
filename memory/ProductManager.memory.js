@@ -12,7 +12,7 @@ class ProductsManager {
             stock: data.stock
         };
         this.#products.push(product);
-        console.log("El producto se creó correctamente.");
+        console.log("The product was created correctly");
     }
 
     read() {
