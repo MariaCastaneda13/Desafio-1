@@ -1,6 +1,5 @@
-const fs = require("fs")
-const crypto = require("crypto")
-const { json } = require("stream/consumers")
+import fs from "fs";
+import crypto from "crypto";
 
 class ProductsManager {
     constructor() {
@@ -213,3 +212,5 @@ async function test() {
     console.log(await gestorDeProductos.readOne("d3955e0450f9fb275df286df"))
 }
 test()
+const ProductsManager =new ProductsManager()
+export default ProductsManager
