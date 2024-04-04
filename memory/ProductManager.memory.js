@@ -176,4 +176,144 @@ productManagerInstance.create({
     price:48000 ,
     stock: 8
 });
+productManagerInstance.create({
+    title: "1984",
+    photo: "1984.jpg",
+    category: "Literatura Universal",
+    price: 100000,
+    stock: 39
+});
+productManagerInstance.create({
+    title: "El arte de la guerra",
+    photo: "EADLG.jpg",
+    category: "No ficción",
+    price: 28000,
+    stock: 30
+});
+productManagerInstance.create({
+    title: "Anna Karenina",
+    photo: "AKNN.jpg",
+    category: "Novela",
+    price:35700 ,
+    stock: 3
+});
+productManagerInstance.create({
+    title: "Eva Luna",
+    photo: "EVL.jpg",
+    category: "Novela",
+    price:50000 ,
+    stock: 8
+});
+productManagerInstance.create({
+    title: "Galapagos",
+    photo: "GLP.jpg",
+    category: "Novela",
+    price: 76000,
+    stock: 40
+});
+productManagerInstance.create({
+    title: "El padrino",
+    photo: "EP1.jpg",
+    category: "Novela",
+    price: 28000,
+    stock: 30
+});
+productManagerInstance.create({
+    title: "Hamlet",
+    photo: "HLT.jpg",
+    category: "Tragedia",
+    price:35700 ,
+    stock: 3
+});
+productManagerInstance.create({
+    title: "Inferno",
+    photo: "INF.jpg",
+    category: "Novela",
+    price: 15900,
+    stock: 12
+});
+productManagerInstance.create({
+    title: "Julio Cesar",
+    photo: "JC.jpg",
+    category: "Novela",
+    price:39700 ,
+    stock: 6
+});
+productManagerInstance.create({
+    title: "Mujercitas",
+    photo: "MJR.jpg",
+    category: "Novela",
+    price: 87000,
+    stock: 17
+});
+productManagerInstance.create({
+    title: "Moby Dick",
+    photo: "MBD.jpg",
+    category: "Novela",
+    price:41000 ,
+    stock: 6
+});
+productManagerInstance.create({
+    title: "El Cuervo",
+    photo: "ECV.jpg",
+    category: "Cuento",
+    price:17800 ,
+    stock: 3
+});
+productManagerInstance.create({
+    title: "El Camino del artista",
+    photo: "ECDA.jpg",
+    category: "Autoayuda y superación",
+    price:96000 ,
+    stock: 8
+});
+productManagerInstance.create({
+    title: "Will",
+    photo: "Will.jpg",
+    category: "Biografía",
+    price:90000 ,
+    stock: 10
+});
+productManagerInstance.create({
+    title: "Mujeres de luz",
+    photo: "MDL.jpg",
+    category: "Autoayuda y superación",
+    price:90661 ,
+    stock: 107
+});
+productManagerInstance.create({
+    title: "Combate el sindrome del impostor",
+    photo: "SDI.jpg",
+    category: "Autoayuda y superación",
+    price:105000 ,
+    stock: 97
+});
+productManagerInstance.create({
+    title: "Hasta que deje de doler",
+    photo: "HQDD.jpg",
+    category: "Autoayuda y superación",
+    price:96500 ,
+    stock: 85
+});
+productManagerInstance.create({
+    title: "Comer, rezar, amar",
+    photo: "CRA.jpg",
+    category: "Novela",
+    price:75000 ,
+    stock: 63
+});
+productManagerInstance.create({
+    title: "Aprendiendo a decir adiós",
+    photo: "AADA.jpg",
+    category: "Autoayuda y superación",
+    price:65000,
+    stock: 80
+});
+productManagerInstance.create({
+    title: "Las mujeres que compran flores",
+    photo: "LMQCF.jpg",
+    category: "Autoayuda y superación",
+    price:63000 ,
+    stock: 30
+});
 console.log(productManagerInstance.read());
