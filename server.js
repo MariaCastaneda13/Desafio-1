@@ -1,31 +1,62 @@
-import express from "express" 
+import express from "express"
 import usersManager from "./data/fs/UsersManager.fs.js";
-import ProductsManager from "./fs/ProductsManager.fs.js";
+import ProductsManager from "./data/fs/ProductsManager.fs.js";
 //Server
 const server = express()
-const port = 8080 
-const ready = ()=> console.log("server ready on port" + port);
-server.listen(port,ready)
+const port = 8080
+const ready = () => console.log("server ready on port" + port);
+server.listen(port, ready)
 //Middlewares
-server.use(express.urlencoded({extended:true}))
+server.use(express.urlencoded({ extended: true }))
 server.use(express.json())
 
 //Router
-server.get("/",async(req,res)=>{
-    try{
-        return response.status(200).json({
-            response: "API",
-            success: true
+server.get("/", async (req, res) => {
+    try {
+        return response.json({
+            statusCode: 200,
+            message: "API",
         })
-    }catch  (error){
+    } catch (error) {
         console.log(error);
-        return res.status(404).json({
-            response:"ERROR",
-            success:false
+        return res.json({
+            statusCode: 404,
+            message: "ERROR"
         })
     }
 
 })
+const create = async (req, res) => {
+    try {
+        const data = req.body
+        const one = await ProductsManager.create(data)
+        return res.json({
+            statusCode: 201,
+            message: "Created ID: " + one.id
+        })
+    } catch (error) {
+        return res.json({
+            statusCode: error.statusCode || 404,
+            message: error.message || "ERROR"
+        })
+    }
+}
+const update = async (req, res) => {
+    try {
+        const { nid } = req.params
+        const data = req.body
+        const one = await ProductsManager.update(pid, data)
+        return res.json({
+            statusCode: 200,
+            message: "Updated Id: " + one.id,
+        })
+    } catch (error) {
+        return res.json({
+            statusCode: error.statusCode || 404,
+            message: error.message || "ERROR"
+        })
+    }
+}
 //
 server.get("/api/products", async (req, res) => {
     try {
@@ -123,4 +154,5 @@ server.get("/api/users/:uid", async (req, res) => {
 })
 
 
-
+server.post("api/products", create)
+server.put("/api/products/:pid", update)

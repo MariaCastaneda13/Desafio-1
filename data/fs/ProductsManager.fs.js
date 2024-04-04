@@ -46,11 +46,26 @@ class ProductsManager {
     }
 
     async readOne(id) {
-        let products = await fs.promises.readFile(this.path, "utf-8")
-        products = JSON.parse(products)
-        return products.find(each => each.id === id)
+       try{
+        let all = await fs.promises.readFile(this.path, "utf-8");
+        all = JSON.parse(all);
+        let note=all.find((each)=>each.id===id);
+        return note;
+       } catch (error){
+        console.log(error);
+        return error
+       
     }
-
+}
+async update(id,data) {
+    try{
+    const one = this.readOne(id)
+    
+    }catch (error){
+        console.log(error);
+        return error
+    }
+}
     async destroy(id) {
         let products = await fs.promises.readFile(this.path, "utf-8")
         users = JSON.parse(products)
@@ -351,6 +366,5 @@ async function test() {
     console.log(await gestorDeProductos.read())
     console.log(await gestorDeProductos.readOne("d3955e0450f9fb275df286df"))
 }
-test()
 const ProductsManager =new ProductsManager()
 export default ProductsManager
